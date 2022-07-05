@@ -8,3 +8,7 @@ CREATE TABLE animals (
     neutered boolean,
     weight_kg decimal
 );
+
+/* Milestone 2: Add Species Table */
+ALTER TABLE animals
+ADD species varchar(255); 
