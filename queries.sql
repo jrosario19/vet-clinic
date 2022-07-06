@@ -112,3 +112,15 @@ GROUP BY owners.full_name
 ORDER BY COUNT(owner_id) DESC
 LIMIT 1;
 
+/* Milestone 4 */
+/* Who was the last animal seen by William Tatcher? */
+SELECT animals.name FROM animals
+JOIN visits ON visits.animals_id = animals.id
+JOIN vets ON visits.vets_id = vets.id
+WHERE vets.name = 'William Tatcher' ORDER BY visits.date_of_visit DESC LIMIT 1;
+
+/* How many different animals did Stephanie Mendez see? */
+SELECT COUNT(animals.name) FROM animals
+JOIN visits ON visits.animals_id = animals.id
+JOIN vets ON visits.vets_id = vets.id WHERE vets.name = 'Stephanie Mendez';
+
